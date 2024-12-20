@@ -1,0 +1,8 @@
+.film-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(6, auto);
+    gap: 1rem;
+    padding: 1rem;
+    height: calc(6 * 400px); 
+}

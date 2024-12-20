@@ -1,0 +1,11 @@
+.cotizador-section__container{
+  height: 90vh;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cotizador-section__h2{
+  color: white;
+}

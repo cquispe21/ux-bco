@@ -1,0 +1,74 @@
+.cotizador-form__container {
+  width: 30rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.cotizador-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cotizador-form__row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.cotizador-form__row--element {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.cotizador-form__button {
+  width: auto;
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.cotizador-form__row--button {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+
+.cotizador-form__select, .cotizador-form__input {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  width: 50%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.cotizador-form__select:focus, .cotizador-form__input:focus {
+  border-color: #d81b60;
+  box-shadow: 0 0 5px rgba(216, 27, 96, 0.5);
+  outline: none;
+}
+
+.cotizador-form__input {
+  width: 100%;
+}
+
+.cotizador-form__label--interest-rate,
+.cotizador-form__label--capitalization-period,
+.cotizador-form__label--performance-value,
+.cotizador-form__label--amount-to-receive {
+  display: flex;
+  justify-content: end;
+}

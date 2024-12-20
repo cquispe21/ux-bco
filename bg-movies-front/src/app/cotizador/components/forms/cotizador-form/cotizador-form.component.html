@@ -1,0 +1,73 @@
+<div class="{{baseClass}}__container">
+  <form class="{{baseClass}}__form" [formGroup]="ngForm">
+    <div class="{{baseClass}}__row">
+      <label class="{{baseClass}}__row--element {{baseClass}}__label">
+        Monto:
+      </label>
+
+      <div class="{{baseClass}}__row--element">
+        <input class="{{baseClass}}__input" type="text" formControlName="amount" bgInputNumbersDirective>
+
+        <!-- <div *ngIf="ngForm.get('amount')?.touched && ngForm.get('amount')?.hasError('amountTooLow')">
+          <span class="error-message">El monto debe ser igual o superior a 200.</span>
+        </div>
+        <div *ngIf="ngForm.get('amount')?.touched && ngForm.get('amount')?.hasError('amountTooHigh')">
+          <span class="error-message">El monto no puede superar los 100000.</span>
+        </div>
+        <div *ngIf="ngForm.get('amount')?.touched && ngForm.get('amount')?.invalid && !ngForm.get('amount')?.hasError('amountTooLow') && !ngForm.get('amount')?.hasError('amountTooHigh')">
+          <span class="error-message">Monto requerido.</span>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="{{baseClass}}__row">
+      <label class="{{baseClass}}__row--element {{baseClass}}__label">
+        Plazo:
+      </label>
+      <select class="{{baseClass}}__row--element {{baseClass}}__select"  formControlName="months">
+        <option *ngFor="let month of months" [value]="month.value">{{ month.label }}</option>
+      </select>
+    </div>
+
+    <div class="{{baseClass}}__row">
+      <label class="{{baseClass}}__row--element {{baseClass}}__label">
+        Tasa de interés*:
+      </label>
+      <label class="{{baseClass}}__row--element {{baseClass}}__label {{baseClass}}__label--interest-rate">
+        {{interestRate}}%
+      </label>
+    </div>
+
+    <div class="{{baseClass}}__row">
+      <label class="{{baseClass}}__row--element {{baseClass}}__label">
+        Periodo de capitalización:
+      </label>
+      <label class="{{baseClass}}__row--element {{baseClass}}__label {{baseClass}}__label--capitalization-period">
+        {{capitalizationPeriod}}
+      </label>
+    </div>
+
+    <div class="{{baseClass}}__row">
+      <label class="{{baseClass}}__row--element {{baseClass}}__label">
+        Valor de rendimiento:
+      </label>
+      <label class="{{baseClass}}__row--element {{baseClass}}__label {{baseClass}}__label--performance-value">
+        {{ performanceValue ? '$' : '' }}{{ performanceValue }}
+      </label>
+    </div>
+
+    <div class="{{baseClass}}__row">
+      <label class="{{baseClass}}__row--element {{baseClass}}__label">
+        Monto que recibirá el cliente**:
+      </label>
+      <label class="{{baseClass}}__row--element {{baseClass}}__label {{baseClass}}__label--amount-to-receive">
+        {{ amountToReceive ? '$' : '' }}{{ amountToReceive }}
+      </label>
+    </div>
+
+    <div class="{{baseClass}}__row {{baseClass}}__row--button">
+      <button class="{{baseClass}}__row--element {{baseClass}}__button" (click)="calcular()">Calcular</button>
+    </div>
+
+  </form>
+</div>
